@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="593,576" sizebox="4,4,4,4" caption="0,0,0,90" mininfo="200,300" roundcorner="4,4">
+    <Font name="微软雅黑" size="12" bold="false" italic="false" />
+    <Font name="微软雅黑" size="12" bold="true" italic="false" />
+	<Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='scrollbar.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='scrollbar.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='scrollbar.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='scrollbar.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='scrollbar.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,16,16,32'&quot;" />
+	<VerticalLayout bkimage="file=&apos;border.png&apos; corner=&apos;5,5,5,5&apos;" bkcolor="#FFEBEBEB" inset="1,1,1,1">
+		<HorizontalLayout height="22">
+			<HorizontalLayout width="180" inset="8,5,0,0">
+				<Label font="1" text="双色球预测大师 2013" pos="4,0,0,0" textcolor="#00000000" disabledtextcolor="#FFA7A6AA" />
+			</HorizontalLayout>
+			<HorizontalLayout>
+			</HorizontalLayout>			
+			<HorizontalLayout  width="99">
+				<Button name="minbtn"  maxwidth="28" maxheight="19" normalimage="btn_mini_normal.png" hotimage="btn_mini_highlight.png" pushedimage="btn_mini_down.png" />
+				<Button name="maxbtn" maxwidth="28" maxheight="19" normalimage="btn_max_normal.png" hotimage="btn_max_highlight.png" pushedimage="btn_max_down.png" />
+				<Button name="restorebtn" visible="false" maxwidth="28" maxheight="19" normalimage="btn_restore_normal.png" hotimage="btn_restore_highlight.png" pushedimage="btn_restore_down.png" />
+				<Button name="closebtn" maxwidth="28" maxheight="19" normalimage="btn_close_normal.png" hotimage="btn_close_highlight.png" pushedimage="btn_close_down.png" />
+			</HorizontalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout height="68">
+			<Option pos="10, 0, 75, 62" float="true" align="bottom" name="tab_news" text="开奖预测" textcolor="#FF386382" font="1" textpadding="0,0,0,2" foreimage="file='commmon.png' dest='10,5,50,45'" normalimage="toolbar_normal.png" hotimage="toolbar_hover.png" pushedimage="toolbar_pushed.png" selectedimage="toolbar_pushed.png" group="quickbar" selected="true"/>
+			<Option pos="85, 0, 150, 62" float="true" align="bottom"  name="tab_draw" text="历史走势" textcolor="#FF386382" font="1" textpadding="0,0,0,2" foreimage="file='firewall.png' dest='10,5,50,45'" normalimage="toolbar_normal.png" hotimage="toolbar_hover.png" pushedimage="toolbar_pushed.png" selectedimage="toolbar_pushed.png" group="quickbar"/>
+			<Option pos="160, 0, 225, 62" float="true" align="bottom" name="tab_man" text="软件说明" textcolor="#FF386382" font="1" textpadding="0,0,0,2" foreimage="file='antivirus.png' dest='10,5,50,45'" normalimage="toolbar_normal.png" hotimage="toolbar_hover.png" pushedimage="toolbar_pushed.png" selectedimage="toolbar_pushed.png" group="quickbar"/>
+			<Option pos="235, 0, 300, 62" float="true" align="bottom" name="tab_post" text="建议反馈" textcolor="#FF386382" font="1" textpadding="0,0,0,2" foreimage="file='bug.png' dest='10,5,50,45'" normalimage="toolbar_normal.png" hotimage="toolbar_hover.png" pushedimage="toolbar_pushed.png" selectedimage="toolbar_pushed.png" group="quickbar"/>
+			<Option pos="310, 0, 375, 62" float="true" align="bottom" name="tab_reg" text="购买软件" textcolor="#FF386382" font="1" textpadding="0,0,0,2" foreimage="file='preventnumber.png' dest='10,5,50,45'" normalimage="toolbar_normal.png" hotimage="toolbar_hover.png" pushedimage="toolbar_pushed.png" selectedimage="toolbar_pushed.png" group="quickbar"/>
+		</HorizontalLayout>
+<!--
+		<HorizontalLayout height="25">
+			<Option pos="86, 0, 164, 26" text="最新信息" name="tab_news" textcolor="#FF386382" font="2" normalimage="tabbar_normal.png" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" selectedimage="tabbar_pushed.png" group="contenttab" selected="true"/>
+			<Option pos="6, 0, 84, 26" text="历史走势" name="tab_draw" textcolor="#FF386382" font="2" normalimage="tabbar_normal.png" hotimage="tabbar_hover.png" pushedimage="tabbar_pushed.png" selectedimage="tabbar_pushed.png" group="contenttab"/>
+		</HorizontalLayout>
+-->
+        <TabLayout name="switch">
+			<VerticalLayout  vscrollbar="true" bkcolor="#FFFEFEFE">
+				<MyContainer1 name = "mydrawarea1" maxheight = "9999" height="1028" />
+			</VerticalLayout>
+			<VerticalLayout  vscrollbar="true" bkcolor="#FFFEFEFE">
+				<MyContainer2 name = "mydrawarea2" maxheight = "19999" height="19999" />
+			</VerticalLayout>			
+			<VerticalLayout  vscrollbar="false" bkcolor="#FFFEFEFE">
+			  <RichEdit name="view_richedit" multiline="true" vscrollbar="true" autovscroll="true" rich="true" readonly="true" inset="10,4,0,6" />
+			</VerticalLayout>			
+		</TabLayout>
+		<HorizontalLayout height="19">
+			<Container width="10" />
+			<Label name="msginfo" text="数据已经从服务器自动更新" textcolor="#00808080" disabledtextcolor="#FFA7A6AA" font="1" />
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>
