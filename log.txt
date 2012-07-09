@@ -1,0 +1,1 @@
+http://localhost/index.php/Index/list_draw/lastdraw/12060
